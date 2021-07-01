@@ -16,11 +16,11 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             //ログインに必要なテーブルの作成
             $table->id();
-            $table->string('nickname',100);
+            $table->string('name');
             $table->string('email')->unique();
+            $table->timestamp('email_verifind_at')->nullable();
             $table->string('password');
-            $table->tinyInteger('locked_flg')->default(0);
-            $table->integer('error_count')->unsigned()->default(0);
+            $table->rememberToken();
             $table->timestamps();
         });
     }
