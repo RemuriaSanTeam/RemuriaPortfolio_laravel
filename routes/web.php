@@ -24,4 +24,4 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'TopController@show'); 
+Route::get('/', 'App\Http\Controllers\TopController@show'); //完全パスを通さなければならない
