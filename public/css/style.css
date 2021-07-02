@@ -4,7 +4,14 @@ html{
 body{
     font-size: 20px;
 }
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 header{
+    padding: 20px auto;
     background: #6C9BD2;
 }
 header h1{
@@ -13,6 +20,26 @@ header h1{
     float: left;
 }
 .top-title{
+    margin: 20px auto;
+    font-size: 24px;
+    color: #000B00;
+}
+.catch-copy{
     margin: 0 auto;
     color: #000B00;
+}
+.site-entry{
+    margin: 20px auto;
+}
+.site-entry li{
+    line-height: 2;
+}
+.site-entry a{
+    font-size: 18px;
+    color: #000B00;
+}
+footer{
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 12px;
 }
