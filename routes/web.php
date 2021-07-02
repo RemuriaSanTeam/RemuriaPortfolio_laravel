@@ -25,3 +25,4 @@ Route::get('/', function () {
 */
 
 Route::get('/', 'App\Http\Controllers\TopController@show'); //完全パスを通さなければならない
+Route::get('/main', 'App\Http\Controllers\MainController@show');
