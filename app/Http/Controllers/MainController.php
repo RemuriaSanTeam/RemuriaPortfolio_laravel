@@ -9,7 +9,7 @@ class MainController extends Controller
     //
     public function show(){
         return view('main',[
-            "current_time"=>data("Y-m-d H:i:s")
+            "current_time"=>date("Y-m-d H:i:s")
         ]);
     }
 }

@@ -7,6 +7,7 @@
                 <br>
                 要はインスタのメイン画面みたいなのを作る
             </p>
+            <p>今の時間は{{$current_time}}だぜ(コントローラーからテンプレに情報を渡す練習)</p>
         </main>
         @include('parts.footer')
     </body>
