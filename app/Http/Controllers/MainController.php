@@ -8,6 +8,8 @@ class MainController extends Controller
 {
     //
     public function show(){
-        return view('main');
+        return view('main',[
+            "current_time"=>data("Y-m-d H:i:s")
+        ]);
     }
 }

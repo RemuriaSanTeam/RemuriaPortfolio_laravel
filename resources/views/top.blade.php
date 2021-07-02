@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="{{ asset('css/style.css')}}"/>
-    <!--<link rel="stylesheet" href="{{ asset('css/reset.css')}}"/>-->
-</head>
-<body>
-    <header>
+@include("parts.common",["title"=>"ようこそ"])
         @include('parts.header')
         @include('parts.nav')
-    </header>
     <main>
         <div class="top-title">
             <h1>トップタイトル</h1>

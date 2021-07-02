@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <link rel="stylesheet" href="{{  asset('css/style.css') }}">
-    </head>
-    <body>
+@include("parts.common")
         @include('parts.header')
+        @include('parts.nav')
         <main>
             <h1>トップページ</h1>
             <p>ここには投稿者,画像,ストーリーバー,プロフィールを載せる
