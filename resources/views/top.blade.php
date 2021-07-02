@@ -4,7 +4,7 @@
 
 </head>
 <body>
-    <header>ヘッダー</header>
+    @include('parts.header')
     <main>
         <div class="top-title">
             <h1>トップタイトル</h1>
@@ -19,8 +19,6 @@
             </ul>
         </div>
     </main>
-    <footer>
-        &copy; RemuriaSanTeam 2021
-    </footer>
+    @include('parts.footer')
 </body>
 </html>
