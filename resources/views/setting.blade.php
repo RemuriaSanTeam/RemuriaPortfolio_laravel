@@ -1,4 +1,4 @@
-@include("parts.common",["title"=>"ようこそ"])
+@include("parts.common",["title"=>"設定"])
         @include('parts.header')
         @include('parts.nav')
     <main>
