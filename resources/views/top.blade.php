@@ -11,7 +11,7 @@
         <div class="site-entry">
             <ul>
                 <li class="entry-list"><a href="/login">ログイン</a></li>
-                <li class="entry-list"><a href="/">サインイン</a></li>
+                <li class="entry-list"><a href="/signin">サインイン</a></li>
             </ul>
         </div>
     </main>
