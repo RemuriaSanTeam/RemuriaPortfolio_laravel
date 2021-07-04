@@ -1,4 +1,4 @@
-@include("parts.common")
+@include('parts.common')
         @include('parts.header')
         @include('parts.nav')
         <main>
