@@ -9,5 +9,4 @@ class PostEntry extends Model
 {
     //use HasFactory;
     protected $table="post_entry";
-    protected $fillable=['image',];
 }

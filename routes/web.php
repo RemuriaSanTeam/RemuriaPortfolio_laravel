@@ -33,5 +33,5 @@ Route::get('/login', 'App\Http\Controllers\LoginController@show');
 Route::get('/logout', 'App\Http\Controllers\LogoutController@show');
 Route::get('/signin', 'App\Http\Controllers\SignInController@show');
 */
-Route::get('/', "App\Http\Controllers\PostEntryController@index");
-Route::post('/create', "App\Http\Controllers\PostEntryController@create");
+Route::get('/', 'App\Http\Controllers\PostEntryController@index');
+Route::post('/create', 'App\Http\Controllers\PostEntryController@create');
