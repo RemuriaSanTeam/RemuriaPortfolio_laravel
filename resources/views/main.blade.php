@@ -16,6 +16,9 @@
         <div class="entry">
             <h5>{{$item->title}}</h5>
             <div>
+                {{$item->image}}
+            </div>
+            <div>
                 {{$item->body}}
             </div>
         </div>

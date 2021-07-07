@@ -6,10 +6,15 @@
     </div>
     <div>
         <label>Title</label><br/>
-        <input type="text" name="author" value="" placeholder="タイトル💖"/>
+        <input type="text" name="title" value="" placeholder="タイトル💖"/>
+    </div>
+    <div>
+        <label>Image</label><br/>
+        <input type="file" name="image" accept="image/png,image/jpeg" placeholder="画像💖"/>
     </div>
     <div>
         <label>Body</label><br/>
-        <input type="submit" value="投稿💖"/>
+        <textarea name="body"></textarea>
     </div>
+        <input type="submit" value="投稿💖"/>
 </form>
