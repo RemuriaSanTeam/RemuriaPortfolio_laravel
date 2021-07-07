@@ -1,4 +1,4 @@
-<form method="POST" action="{{url('/create')}}">
+<form method="POST" action="{{url('/create')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div>
         <label>Name</label><br/>
@@ -8,9 +8,11 @@
         <label>Title</label><br/>
         <input type="text" name="title" value="" placeholder="タイトル💖"/>
     </div>
+    <!--画像アップロード-->
     <div>
         <label>Image</label><br/>
-        <input type="file" name="image" accept="image/png,image/jpeg" placeholder="画像💖"/>
+        <input type="file" name="image" accept="image/png,image/jpeg">/>
+        <input type="submit" value="アップロード💖">
     </div>
     <div>
         <label>Body</label><br/>

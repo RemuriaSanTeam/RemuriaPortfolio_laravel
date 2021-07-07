@@ -20,15 +20,12 @@ class PostEntryController extends Controller
     }
     function create(Request $request){
         //投稿処理を行う
-        $input=$request->only('author','title','body');
+        $input=$request->only('author','title','image','body');
         //dd($input);
         $entry=new PostEntry();
-        $entry->author=$input["author"];
-        $entry->title=$input["title"];
-        $entry->image=$input["image"];
-        $entry->body=$input["body"];
-        $entry->save();
-
-        return redirect('/');
+        $entry=$input['author'];
+        $entry=$input['title'];
+        $entry=$input['image'];
+        $entry=$input['body'];
     }
 }
