@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PostEntry;
+use Validator;
 
 class PostEntryController extends Controller
 {
@@ -13,7 +14,7 @@ class PostEntryController extends Controller
         //ddでDBの中身確認したいときはmysqlを開いた状態にする(当たり前)
         //ddはデバック用
         //dd(PostEntry::all());
-        $item_list=PostEntry::all();
+        $item_list=PostEntry::orderBy("id","desc")->paginate(10);//pageinate:ページングの指定
         return view("main",[
             "item_list"=> $item_list
         ]);
@@ -21,11 +22,26 @@ class PostEntryController extends Controller
     function create(Request $request){
         //投稿処理を行う
         $input=$request->only('author','title','image','body');
+        $validator=Validator::make($input,[
+            'author'=>'required|string|max:30',
+            'title'=>'required|string|max:30',
+            'image'=>'required|file|image|mimes:png,jpeg',
+            'body'=>'required|string|max:100'
+        ]);
+        //バリデーション失敗
+        if($validator->fails()){
+            return redirect('/')
+            ->withErrors($validator);
+        }
+        //バリデーション成功
         //dd($input);
         $entry=new PostEntry();
-        $entry=$input['author'];
-        $entry=$input['title'];
-        $entry=$input['image'];
-        $entry=$input['body'];
+        $entry->author=$input['author'];
+        $entry->title=$input['title'];
+        $entry->image=$input['image'];
+        $entry->body=$input['body'];
+        $entry->save();
+
+        return redirect('/');
     }
 }

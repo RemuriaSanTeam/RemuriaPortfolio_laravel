@@ -12,14 +12,26 @@
         <!--投稿フォーム-->
         @include("parts.form")
         <h2>記事一覧</h2>
+        <style type="text/css">
+            .pagination {
+             display: inline-block;
+            }
+            .pagination .page-item {
+             color: black;
+             float: left;
+             padding: 8px 16px;
+             text-decoration: none;
+             list-style: none;
+            }
+            </style>
         @foreach($item_list as $item)
         <div class="entry">
-            <h5>{{$item->title}}</h5>
+            <h5>{{$item->title}} by {{$item->author}}</h5>
             <div>
-                {{$item->image}}
+                {{nl2br(e($item->image))}}
             </div>
             <div>
-                {{$item->body}}
+                {{nl2br(e($item->body))}}
             </div>
         </div>
         @endforeach
