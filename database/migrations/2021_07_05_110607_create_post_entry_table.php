@@ -18,7 +18,6 @@ class CreatePostEntryTable extends Migration
             $table->string("title");//タイトル
             $table->string("author");//投稿者名
             $table->string("image");//投稿画像
-            $table->string("file");//画像の保存先
             $table->string("body");//本文
             $table->timestamps();
         });
