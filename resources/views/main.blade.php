@@ -28,7 +28,7 @@
         <div class="entry">
             <h5>{{$item->title}} by {{$item->author}}</h5>
             <div>
-                <img src="{{asset('storage/'.$item->image)}}" alt="投稿画像" width="80px">
+                <img src="{{Storage::url($item->image)}}" alt="投稿画像" width="80px">
             </div>
             <div>
                 {{nl2br(e($item->body))}}
