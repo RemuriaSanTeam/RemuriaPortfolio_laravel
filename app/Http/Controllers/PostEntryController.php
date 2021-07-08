@@ -11,8 +11,6 @@ class PostEntryController extends Controller
     //
     function index(){
         //投稿一覧画面を表示
-        //ddでDBの中身確認したいときはmysqlを開いた状態にする(当たり前)
-        //ddはデバック用
         //dd(PostEntry::all());
         $item_list=PostEntry::orderBy("id","desc")->paginate(10);//pageinate:ページングの指定
         return view("main",[
@@ -25,13 +23,17 @@ class PostEntryController extends Controller
         $validator=Validator::make($input,[
             'author'=>'required|string|max:30',
             'title'=>'required|string|max:30',
-            'image'=>'required|file|image|mimes:png,jpeg',
+            'image'=>'required|file|image',
             'body'=>'required|string|max:100'
         ]);
         //バリデーション失敗
         if($validator->fails()){
             return redirect('/')
             ->withErrors($validator);
+        }
+        if(request('image')){
+            $filename=request()->file('image')->getClientOriginalName();
+            $input['image']=request('image')->storeAs('public/image',$filename);
         }
         //バリデーション成功
         //dd($input);

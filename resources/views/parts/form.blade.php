@@ -21,8 +21,7 @@
     <!--画像アップロード-->
     <div>
         <label>Image</label><br/>
-        <input type="file" name="image" accept="image/png,image/jpeg">/>
-        <input type="submit" value="アップロード💖">
+        <input type="file" name="image" placeholder="アップロード💖"/>
     </div>
     <div>
         <label>Body</label><br/>
