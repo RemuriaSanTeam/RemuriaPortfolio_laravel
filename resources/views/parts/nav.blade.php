@@ -8,6 +8,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="{{url('/')}}">トップ</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/main')}}">メイン</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('/post')}}">投稿</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/story')}}">ストーリー</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/profile')}}">プロフィール</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/setting')}}">設定</a></li>
