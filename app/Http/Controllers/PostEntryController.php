@@ -13,7 +13,7 @@ class PostEntryController extends Controller
         //投稿一覧画面を表示
         //dd(PostEntry::all());
         $item_list=PostEntry::orderBy("id","desc")->paginate(10);//pageinate:ページングの指定
-        return view("main",[
+        return view("post",[
             "item_list"=> $item_list
         ]);
     }

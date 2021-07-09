@@ -35,3 +35,6 @@ Route::get('/signin', 'App\Http\Controllers\SignInController@show');
 
 Route::get('/post', 'App\Http\Controllers\PostEntryController@index');
 Route::post('/create', 'App\Http\Controllers\PostEntryController@create');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

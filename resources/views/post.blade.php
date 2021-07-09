@@ -9,7 +9,7 @@
             </p>
             <p>今の時間はだぜ(コントローラーからテンプレに情報を渡す練習)</p>
         </main>-->
-        <!--投稿フォーム-->
+        <h2>投稿フォーム</h2>
         @include("parts.form")
         <h2>記事一覧</h2>
         @foreach($item_list as $item)

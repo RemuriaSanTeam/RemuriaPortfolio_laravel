@@ -1,7 +1,7 @@
 @include('parts.common')
         @include('parts.header')
         @include('parts.nav')
-        <<main>
+        <main>
             <h1>トップページ</h1>
             <p>ここには投稿者,画像,ストーリーバー,プロフィールを載せる
                 <br>
