@@ -1,6 +1,10 @@
 @include("parts.common",["title"=>"ようこそ"])
         @include('parts.header')
-        @include('parts.nav')
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top">Remustagram</a>
+            </div>
+        </nav>
     <main>
         <div class="top-title">
             <h1>トップタイトル</h1>

@@ -21,12 +21,13 @@ class UserCreated
      */
     public function __construct()
     {
-        //
+        
         $team=new Team();
         $team->user_id=$user->id;
         $team->name=$user->name.'サンチーム';
         $team->personal_team=true;
         $team->save();
+        
     }
 
     /**
