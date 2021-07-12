@@ -8,6 +8,6 @@ class SignInController extends Controller
 {
     //
     public function show(){
-        return view('sign_in');
+        return view('auth\register');
     }
 }

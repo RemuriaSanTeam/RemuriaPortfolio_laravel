@@ -29,7 +29,7 @@ Route::get('/main', 'App\Http\Controllers\MainController@show');
 Route::get('/story', 'App\Http\Controllers\StoryController@show');
 Route::get('/profile', 'App\Http\Controllers\ProfileController@show');
 Route::get('/setting', 'App\Http\Controllers\SettingController@show');
-Route::get('/login', 'App\Http\Controllers\LoginController@show');
+//Route::get('/login', 'App\Http\Controllers\LoginController@show');
 Route::get('/logout', 'App\Http\Controllers\LogoutController@show');
 Route::get('/signin', 'App\Http\Controllers\SignInController@show');
 
