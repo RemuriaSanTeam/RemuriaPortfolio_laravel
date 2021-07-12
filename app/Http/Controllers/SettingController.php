@@ -8,6 +8,6 @@ class SettingController extends Controller
 {
     //
     public function show(){
-        return view('setting');
+        return view('profile\show');
     }
 }

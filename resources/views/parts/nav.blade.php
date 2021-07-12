@@ -12,8 +12,6 @@
                 <li class="nav-item"><a class="nav-link" href="{{url('/story')}}">ストーリー</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/profile')}}">プロフィール</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/setting')}}">設定</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{url('/signin')}}">サインイン</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{url('/login')}}">ログイン</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/logout')}}">ログアウト</a></li>
             </ul>
         </div>

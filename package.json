@@ -19,5 +19,14 @@
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.1",
         "tailwindcss": "^2.2.2"
+    },
+    "dependencies": {
+        "@babel/code-frame": "^7.14.5",
+        "@babel/helper-plugin-utils": "^7.14.5",
+        "acorn-node": "^2.0.1",
+        "icss-utils": "^5.1.0",
+        "node-notifier": "^10.0.0",
+        "picomatch": "^2.3.0",
+        "purgecss": "^4.0.3"
     }
 }
