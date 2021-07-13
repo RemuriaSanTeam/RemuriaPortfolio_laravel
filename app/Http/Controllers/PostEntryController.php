@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\PostEntry;
 use Validator;
 use Auth;
+use Illuminate\Support\Facades\Gate;
 
 class PostEntryController extends Controller
 {
@@ -18,6 +19,7 @@ class PostEntryController extends Controller
             "item_list"=> $item_list
         ]);
     }
+    
     function create(Request $request){
         //投稿処理を行う
         $input=$request->only('author','title','image','body');

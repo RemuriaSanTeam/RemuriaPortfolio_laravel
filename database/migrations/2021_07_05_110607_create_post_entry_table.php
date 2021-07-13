@@ -21,6 +21,7 @@ class CreatePostEntryTable extends Migration
             $table->string("body");//本文
             $table->timestamps();
         });
+        //return $this->belongTo('App\Models\User');
     }
 
     /**
