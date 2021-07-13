@@ -22,7 +22,6 @@
                     {{nl2br(e($item->body))}}
                 </div>
             </div>
-
             <!--投稿者にのみ、編集ボタン･削除ボタンを表示する-->
             {{--@if($article->user_id==$login_user_id)<!--今ログインしているユーザーIDを投稿者IDが一致しているとき-->
                 <a href="{{route("article.edit",["article"=>$article->id])}}",class='btn'>編集ボタン</a>
