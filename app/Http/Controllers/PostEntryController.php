@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\PostEntry;
 use Validator;
+use Auth;
 
 class PostEntryController extends Controller
 {
@@ -20,21 +21,28 @@ class PostEntryController extends Controller
     function create(Request $request){
         //投稿処理を行う
         $input=$request->only('author','title','image','body');
+
+        //投稿者レコードにユーザー名を代入する
+        $input['author']=Auth::user()->name;
+
         $validator=Validator::make($input,[
             'author'=>'required|string|max:30',
             'title'=>'required|string|max:30',
             'image'=>'required|file|image',
             'body'=>'required|string|max:100'
         ]);
+
         //バリデーション失敗
         if($validator->fails()){
             return redirect('/')
             ->withErrors($validator);
         }
+
         if(request('image')){
             $filename=request()->file('image')->getClientOriginalName();
             $input['image']=request('image')->storeAs('public/image',$filename);
         }
+
         //バリデーション成功
         //dd($input);
         $entry=new PostEntry();
@@ -44,6 +52,6 @@ class PostEntryController extends Controller
         $entry->body=$input['body'];
         $entry->save();
 
-        return redirect('/');
+        return redirect('/post');
     }
 }

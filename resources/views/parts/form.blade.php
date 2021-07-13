@@ -9,11 +9,11 @@
 @endif
 
 <form method="POST" action="{{url('/create')}}" enctype="multipart/form-data">
-    {{ csrf_field() }}
-    <div>
+    @csrf
+    <!--<div>
         <label>Name</label><br/>
         <input type="text" name="author" value="" placeholder="名前💖"/>
-    </div>
+    </div>-->
     <div>
         <label>Title</label><br/>
         <input type="text" name="title" value="" placeholder="タイトル💖"/>
