@@ -9,7 +9,7 @@
             </p>
             <p>今の時間はだぜ(コントローラーからテンプレに情報を渡す練習)</p>
         </main>-->
-        @can('user','admin')
+        @can('user')
         <h2>投稿フォーム</h2>
         @include("parts.form")
         @endcan
@@ -24,22 +24,18 @@
                     {{nl2br(e($item->body))}}
                 </div>
             </div>
-            <!--投稿者にのみ、編集ボタン･削除ボタンを表示する(adminはすべての投稿の削除権限を持つ)-->
-            @if($item ->user_id==Auth::user()->id)<!--今ログインしているユーザーIDを投稿者IDが一致しているとき-->
-                <a href="{{route("article.edit",["article"=>$article->id])}}",class='btn'>編集ボタン</a>
-                {{Form::open(['method'=>'delete','route'=>['article.destroy',$article->id]])}}
-                    {{From::submit('削除ボタン',['class'=>'btn'])}}
-                {{From::close()}}
-            @endif
+            <!--削除ボタン-->
+            <form action="{{route('post.destroy',$item->id)}}" method="post" class="float-right">
+            @csrf
+            @method('delete')
+            <input type="submit" value="削除" class="btn btn-danger" onclick='return confirm("削除しちゃうの？");'>
+            </form>
         @endforeach
 
         @if(count($item_list)<1)
         <p>投稿無いよ?</p>
         @endif
 
-        @foreach ($item_list as $item)
-            <p>{{ $item -> user_id }}</p>
-        @endforeach
         @include('parts.footer')
     </body>
 </html>

@@ -35,7 +35,7 @@ Route::get('/signin', 'App\Http\Controllers\SignInController@show');
 
 Route::get('/post', [PostEntryController::class,'index'])->name('post');//標準的なlaravel8のルートの通し方
 Route::post('/create', [PostEntryController::class,'create'])->name('post');
-Route::post('/delete/{id}/',[PostEntryController::class,'delete'])->name('post');//削除
+Route::post('/delete/{id}/',[PostEntryController::class,'destroy'])->name('post');//削除
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

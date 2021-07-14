@@ -61,4 +61,13 @@ class PostEntryController extends Controller
 
         return redirect('/post');
     }
+    public function destroy($id){
+        $item_list=PostEntry::find($id);
+        if(auth()-user()->id!=$item_list->user_id){
+        return redirect(route('post.index'))->with('error','許可してないけど');
+        }
+    
+        $item_list->delete();
+        return redirect(route('post.index'))->with('success','消したよ');
+    }
 }
