@@ -24,13 +24,23 @@ class CreateNewUser implements CreatesNewUsers
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
-            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
+            //'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
+        //入力された値をコード値に変換する処理
+        switch($input['access_auth']){
+            case "User":
+                $auth_code="0";
+                break;
+            case "Admin":
+                $auth_code="9";
+                break;
+        }
 
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
+            'access_auth'=>$auth_code,//テーブルへ書き込む処理
         ]);
     }
 }

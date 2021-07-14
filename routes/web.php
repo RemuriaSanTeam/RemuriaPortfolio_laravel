@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostEntryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,8 +33,8 @@ Route::get('/setting', 'App\Http\Controllers\SettingController@show');
 Route::get('/logout', 'App\Http\Controllers\LogoutController@show');
 Route::get('/signin', 'App\Http\Controllers\SignInController@show');
 
-Route::get('/post', 'App\Http\Controllers\PostEntryController@index');
-Route::post('/create', 'App\Http\Controllers\PostEntryController@create');
+Route::get('/post', [PostEntryController::class,'index'])->name('post');//標準的なlaravel8のルートの通し方
+Route::post('/create', [PostEntryController::class,'create'])->name('post');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

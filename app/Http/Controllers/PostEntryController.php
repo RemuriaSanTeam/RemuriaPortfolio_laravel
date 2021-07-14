@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Gate;
 class PostEntryController extends Controller
 {
     //
+    
     function index(){
         //投稿一覧画面を表示
         //dd(PostEntry::all());
