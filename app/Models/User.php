@@ -59,4 +59,12 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    
+    public function post_entry(){
+
+        //PostEntryとのリレーション
+        return $this->hasMauy('App\Models\PostEntry');
+    }
+    
 }

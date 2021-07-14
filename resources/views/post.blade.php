@@ -24,7 +24,7 @@
                     {{nl2br(e($item->body))}}
                 </div>
             </div>
-            <!--投稿者にのみ、編集ボタン･削除ボタンを表示する-->
+            <!--投稿者にのみ、編集ボタン･削除ボタンを表示する(adminはすべての投稿の削除権限を持つ)-->
             {{--@if($article->user_id==$login_user_id)<!--今ログインしているユーザーIDを投稿者IDが一致しているとき-->
                 <a href="{{route("article.edit",["article"=>$article->id])}}",class='btn'>編集ボタン</a>
                 {{Form::open(['method'=>'delete','route'=>['article.destroy',$article->id]])}}
@@ -37,9 +37,9 @@
         <p>投稿無いよ?</p>
         @endif
 
-        {{--@foreach ($articles as $article)
-            <p>{{ $article -> user -> name }}</p>
-        @endforeach--}}
+        @foreach ($item_list as $item)
+            <p>{{ $item -> user_id }}</p>
+        @endforeach
         @include('parts.footer')
     </body>
 </html>
