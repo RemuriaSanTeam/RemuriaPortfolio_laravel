@@ -25,12 +25,12 @@
                 </div>
             </div>
             <!--投稿者にのみ、編集ボタン･削除ボタンを表示する(adminはすべての投稿の削除権限を持つ)-->
-            {{--@if($article->user_id==$login_user_id)<!--今ログインしているユーザーIDを投稿者IDが一致しているとき-->
+            @if($item ->user_id==Auth::user()->id)<!--今ログインしているユーザーIDを投稿者IDが一致しているとき-->
                 <a href="{{route("article.edit",["article"=>$article->id])}}",class='btn'>編集ボタン</a>
                 {{Form::open(['method'=>'delete','route'=>['article.destroy',$article->id]])}}
                     {{From::submit('削除ボタン',['class'=>'btn'])}}
                 {{From::close()}}
-            @endif--}}
+            @endif
         @endforeach
 
         @if(count($item_list)<1)

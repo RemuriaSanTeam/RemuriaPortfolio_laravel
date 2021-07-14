@@ -61,5 +61,4 @@ class PostEntryController extends Controller
 
         return redirect('/post');
     }
-
 }
