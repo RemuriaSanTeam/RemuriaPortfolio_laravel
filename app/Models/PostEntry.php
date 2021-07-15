@@ -10,9 +10,9 @@ class PostEntry extends Model
     //use HasFactory;
     protected $table="post_entry";
 
-    public function user(){
+    /*public function user(){
 
         //Userモデルとのリレーション
         return $this->belongsTo('App\Models\User');
-    }
+    }*/
 }

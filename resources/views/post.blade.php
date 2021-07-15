@@ -23,13 +23,15 @@
                 <div>
                     {{nl2br(e($item->body))}}
                 </div>
+                <p>ユーザーID:{{$item->user_id}}</p>
             </div>
             <!--削除ボタン-->
-            <form action="{{route('post.destroy',$item->id)}}" method="post" class="float-right">
-            @csrf
-            @method('delete')
-            <input type="submit" value="削除" class="btn btn-danger" onclick='return confirm("削除しちゃうの？");'>
+            <form action='{{url('/remove')}}' method="POST">
+                @csrf
+                <input type='hidden' name='id' value='{{ $item->id }}'>
+                <input type ='submit' class="btn btn-danger" value="削除">
             </form>
+            {{--<a href="{{route('delete')}}?id={{$item->id}}" class="btn btn-danger">削除</a>--}}
         @endforeach
 
         @if(count($item_list)<1)

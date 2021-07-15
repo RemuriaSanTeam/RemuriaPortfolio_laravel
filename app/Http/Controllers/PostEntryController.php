@@ -15,11 +15,11 @@ class PostEntryController extends Controller
     function index(){
         //投稿一覧画面を表示
         //dd(PostEntry::all());
-        //$item_list=PostEntry::orderBy("id","desc")->paginate(10);//pageinate:ページングの指定
+        $item_list=PostEntry::orderBy("id","desc")->paginate(10);//pageinate:ページングの指定
         $item_list = PostEntry::all();
         return view("post",[
             "item_list"=> $item_list
-        ]);
+        ]);//post.blede.phpに返している
     }
 
     function create(Request $request){
@@ -61,13 +61,15 @@ class PostEntryController extends Controller
 
         return redirect('/post');
     }
-    public function destroy($id){
-        $item_list=PostEntry::find($id);
-        if(auth()-user()->id!=$item_list->user_id){
-        return redirect(route('post.index'))->with('error','許可してないけど');
-        }
-    
+    public function delete(Request $request){
+        //item_list内のuser_idを見つけて表示してるだけ
+        $item_list=PostEntry::findOrFail($request->id);
+        return view("post",["item_list"=>$item_list]);
+    }
+
+    public function remove(Request $request){
+        $item_list=PostEntry::findOrFail($request->id);
         $item_list->delete();
-        return redirect(route('post.index'))->with('success','消したよ');
+        return redirect('/post');//post.blede.phpに返している
     }
 }
