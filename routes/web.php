@@ -37,6 +37,8 @@ Route::get('/post', [PostEntryController::class,'index'])->name('index');//標�
 Route::post('/create', [PostEntryController::class,'create'])->name('create');
 Route::get('/delete',[PostEntryController::class,'delete'])->name('delete');//削除警告
 Route::post('/remove',[PostEntryController::class,'remove'])->name('remove');//削除
+Route::get('/edit',[PostEntryController::class,'edit'])->name('edit');//編集
+Route::post('/update',[PostEntryController::class,'update'])->name('update');//更新
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

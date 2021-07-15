@@ -61,6 +61,8 @@ class PostEntryController extends Controller
 
         return redirect('/post');
     }
+
+    //使ってない
     public function delete(Request $request){
         //item_list内のuser_idを見つけて表示してるだけ
         $item_list=PostEntry::findOrFail($request->id);
@@ -71,5 +73,19 @@ class PostEntryController extends Controller
         $item_list=PostEntry::findOrFail($request->id);
         $item_list->delete();
         return redirect('/post');//post.blede.phpに返している
+    }
+
+    public function edit(Request $request){
+        $item_list=PostEntry::findOrFail($request->id);
+        return view('edit',['item_list'=>$item_list]);
+    }
+
+    public function update(Request $request){
+        $item_list=PostEntry::findOrFail($request->id);
+        $item_list->title=$request->title;
+        $item_list->image=$request->image;
+        $item_list->body=$request->body;
+        $item_list->save();
+        return redirect('/post');
     }
 }
