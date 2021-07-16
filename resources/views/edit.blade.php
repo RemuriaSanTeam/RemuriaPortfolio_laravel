@@ -19,5 +19,6 @@
             </div>
             <input type="submit" class="btn btn-primary" value="変更💖"/>
         </form>
+        @include('parts.footer')
     </body>
 </html>
