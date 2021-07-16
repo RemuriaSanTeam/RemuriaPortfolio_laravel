@@ -33,7 +33,7 @@
                 <input type ='submit' class="btn-dell btn btn-danger" value="削除">
             </form>
             <!--編集ボタン-->
-            
+            <a href="{{url('edit')}}?id={{$item->id}}" class="btn btn-info">編集</a>
             @endif
         @endforeach
 
