@@ -1,5 +1,5 @@
-@include('parts.common',["title"=>"投稿"])
-@include('parts.header')
+@include("parts.common",["title"=>"投稿"])
+    @include('parts.header')
     @include('parts.nav')
         <!--<main>
             <h1>トップページ</h1>
@@ -9,12 +9,12 @@
             </p>
             <p>今の時間はだぜ(コントローラーからテンプレに情報を渡す練習)</p>
         </main>-->
+        <h2>記事一覧</h2>
+        <section class="py-5">
         @can('user')
         <h2>投稿フォーム</h2>
         @include("parts.form")
         @endcan
-        <h2>記事一覧</h2>
-        <section class="py-5">
         @foreach($item_list as $item)
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -31,18 +31,16 @@
                             </div>
                             @if($item->user_id==Auth::user()->id)
                             <!--削除ボタン-->
-                            <div class="card-footer p-4 pt-0 border-top-0">
+                            <div class="card-footer p-4 pt-0">
                                 <form action='{{url('/remove')}}' method="POST">
                                     @csrf
                                     <input type='hidden' name='id' value='{{ $item->id }}'><!--ここでpost_entryのid要素を取得してる-->
-                                    <div class="card-footer p-4 pt-0 border-top-0">
+                                    <div class="card-footer p-4 pt-0">
                                         <div class="text-center"><input type ='submit' class="btn-dell btn btn-danger mt-auto" value="削除"></div>
                                     </div>
                                 </form>
                             <!--編集ボタン-->
-                                    <div class="card-footer p-4 pt-0 border-top-0">
-                                        <a href="{{url('edit')}}?id={{$item->id}}" class="btn btn-info mt-auto">編集</a>
-                                    </div>
+                                    <a href="{{url('edit')}}?id={{$item->id}}" class="btn btn-info mt-auto">編集</a>
                             </div>
                             @endif
                         </div>
