@@ -52,11 +52,7 @@
         @if(count($item_list)<1)
         <h5 class="fw-bolder">投稿ないよ？</h5>
         @endif
-
         @include('parts.footer')
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
         <script>
             $(function(){
                 $(".btn-dell").click(function(){
