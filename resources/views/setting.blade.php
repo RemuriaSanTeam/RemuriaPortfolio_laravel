@@ -1,6 +1,5 @@
 @include("parts.common",["title"=>"設定"])
         @include('parts.header')
-        @include('parts.nav')
     <main>
         <div class="top-title">
             <h1>設定</h1>

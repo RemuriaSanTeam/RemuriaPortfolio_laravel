@@ -1,6 +1,5 @@
 @include("parts.common",["title"=>"プロフィール"])
         @include('parts.header')
-        @include('parts.nav')
     <main>
         <div class="top-title">
             <h1>プロフィール画面</h1>
