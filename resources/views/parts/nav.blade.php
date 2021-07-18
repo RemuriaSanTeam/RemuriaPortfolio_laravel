@@ -11,10 +11,13 @@
                 <li class="nav-item"><a class="nav-link" href="{{url('/post')}}">投稿</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{url('/story')}}">ストーリー</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">垢設定</a>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">垢設定</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{url('/profile')}}">プロフィール</a></li>
-                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
                         <li><a class="dropdown-item" href="{{url('/setting')}}">設定</a></li>
                         <li><a class="dropdown-item" href="{{url('/logout')}}">ログアウト</a></li>
                     </ul>
