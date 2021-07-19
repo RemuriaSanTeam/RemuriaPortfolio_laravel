@@ -1,6 +1,5 @@
 @include("parts.common",["title"=>"ストーリー"])
         @include('parts.header')
-        @include('parts.nav')
     <main>
         <div class="top-title">
             <h1>ストーリー</h1>

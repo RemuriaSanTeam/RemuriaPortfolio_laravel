@@ -2,10 +2,10 @@
 @include('parts.header')
 <h2>記事一覧</h2>
 @can('user')
-<h2>投稿フォーム</h2>
+<h2 class="row justify-content-center">投稿フォーム</h2>
 @include("parts.form")
 @endcan
-<div class="album py-5 bg-light">
+<div class="album py-5 bg-dark">
     <div class="container">
         <div class="row">
             @foreach($item_list as $item)

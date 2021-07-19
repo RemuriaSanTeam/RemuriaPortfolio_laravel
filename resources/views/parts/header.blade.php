@@ -1,8 +1,8 @@
 <header>
-    <div class="collapse bg-dark" id="navbarHeader">
+    <div class="collapse bg-warning" id="navbarHeader">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 offset-md-1 py-4">
+                <div class="col-sm-4 offset-md-10 py-4">
                     <h4 class="text-white">MEMU</h4>
                     <ul class="list-unstyled">
                         <li><a href="{{url('/main')}}" class="text-white">メイン</a></li>
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="navbar navbar-dark bg-primary shadow-sm">
         <div class="container">
             <a href="/" class="navbar-brand d-flex align-items-center">
                 <strong>Remustagram</strong>

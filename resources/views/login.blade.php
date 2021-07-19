@@ -1,6 +1,5 @@
 @include("parts.common",["title"=>"ログイン"])
         @include('parts.header')
-        @include('parts.nav')
     <main>
         <div class="top-title">
             <h1>ログイン</h1>
