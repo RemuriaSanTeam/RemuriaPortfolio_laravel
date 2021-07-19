@@ -7,6 +7,7 @@ use App\Models\PostEntry;
 use Validator;
 use Auth;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Storage;
 
 class PostEntryController extends Controller
 {
@@ -73,10 +74,14 @@ class PostEntryController extends Controller
         return view('edit',['item_list'=>$item_list]);
     }
 
-    public function update(Request $request){
+    public function update(Request $request,PostEntry $item_list){
         $item_list=PostEntry::findOrFail($request->id);
         $item_list->title=$request->title;
-        $item_list->image=$request->image;
+        if($request->hasFile('image')){
+            Storage::delete('public/image/'.$item_list->imege);
+            $filename=request()->file('image')->getClientOriginalName();
+            $item_list->image=request('image')->storeAs('public/image',$filename);
+        }
         $item_list->body=$request->body;
         $item_list->save();
         return redirect('/post');
