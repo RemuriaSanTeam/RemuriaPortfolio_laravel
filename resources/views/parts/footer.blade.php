@@ -1,6 +1,6 @@
 <footer class="text-muted">
     <div class="container">
-        <p class="float-right">
+        <p class="float-end">
             <a href="#">TOP</a>
         </p>
         <p>&copy; RemuriaSanTeam 2021</p>

@@ -10,10 +10,11 @@
 
 <form class="my-3" method="POST" action="{{url('/create')}}" enctype="multipart/form-data">
     @csrf
+    <!--タイトル-->
     <div class="form-group">
         <div class="mb-3 offset-md-1">
             <div class="col-6">
-            <label for="formFileMultiple" class="form-label">Title</label>
+                <label for="formFileMultiple" class="form-label">Title</label>
                 <input class="form-control mb-3" name="title" type="text" placeholder="タイトル💖" aria-label="Title">
             </div>
         </div>
@@ -22,15 +23,16 @@
     <div class="form-group">
         <div class="mb-3 offset-md-1">
             <div class="col-6">
-            <label for="formFileMultiple" class="form-label">Image</label>
+                <label for="formFileMultiple" class="form-label">Image</label>
                 <input class="form-control" type="file" name="image" id="formFileMultiple" placeholder="アップロード💖"
                     multiple>
             </div>
         </div>
     </div>
+    <!--内容-->
     <div class="mb-3 offset-md-1">
         <div class="col-10">
-        <label for="exampleFormControlTextarea1" class="form-label">Body</label>
+            <label for="exampleFormControlTextarea1" class="form-label">Body</label>
             <textarea name="body" class="form-control" id="exampleFormControlTextarea1" rows="5"
                 placeholder="何が言いたい？"></textarea>
         </div>

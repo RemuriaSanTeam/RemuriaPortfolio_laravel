@@ -2,6 +2,14 @@
 
 :root {
     --jumbotron-padding-y: 3rem;
+    --bs-primary: #ee0979;
+    --bs-secondary: #ff8a37;
+    --bs-success: #4acc8f;
+    --bs-info: #43d4f1;
+    --bs-warning: #f0d01a;
+    --bs-danger: #c90f22;
+    --bs-light: #fff;
+    --bs-dark: #000B00;
   }
   
   .jumbotron {
