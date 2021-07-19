@@ -16,6 +16,14 @@
       padding-bottom: calc(var(--jumbotron-padding-y) * 2);
     }
   }
+
+  a {
+    color: #ee0979;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #be0761;
+  }
   
   .jumbotron p:last-child {
     margin-bottom: 0;
