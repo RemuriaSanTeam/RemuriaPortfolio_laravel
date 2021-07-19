@@ -1,7 +1,6 @@
 @include("parts.common",["title"=>"ログアウト"])
-        @include('parts.header')
-        @include('parts.nav')
-    <!--<main>
+@include('parts.header')
+<!--<main>
         <div class="top-title">
             <h1>ログアウト</h1>
         </div>
@@ -12,15 +11,14 @@
             </h2>
         </div>
     </main>-->
-    <form method="POST" action="{{ route('logout') }}">
-        @csrf
-
-        <x-jet-dropdown-link href="{{ route('logout') }}"
-                 onclick="event.preventDefault();
+<form method="POST" action="{{ route('logout') }}">
+    @csrf
+    <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
                         this.closest('form').submit();">
-            {{ __('Log Out') }}
-        </x-jet-dropdown-link>
-    </form>
-    @include('parts.footer')
+        {{ __('Log Out') }}
+    </x-jet-dropdown-link>
+</form>
+@include('parts.footer')
 </body>
+
 </html>

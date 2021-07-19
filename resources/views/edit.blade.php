@@ -22,15 +22,17 @@
             <div class="col-6">
                 <label for="formFileMultiple" class="form-label">Image</label>
                 <input type="file" class="form-control mb-3" name="image" value="{{$item_list->image}}"
-                    placeholder="アップロード💖" aria-label="Image" multiple>
+                    placeholder="アップロード💖" aria-label="Image">
             </div>
         </div>
     </div>
-    <div class="mb-3 offset-md-1">
-        <div class="col-10">
-            <label for="exampleFormControlTextarea1" class="form-label">Body</label>
-            <textarea name="body" class="form-control" id="exampleFormControlTextarea1" rows="5"
-                value="{{$item_list->body}}" placeholder="何が言いたい？"></textarea>
+    <div class="form-group">
+        <div class="mb-3 offset-md-1">
+            <div class="col-10">
+                <label for="exampleFormControlTextarea1" class="form-label">Body</label>
+                <textarea name="body" class="form-control" id="exampleFormControlTextarea1" rows="5"
+                    value="{{$item_list->body}}" placeholder="何が言いたい？"></textarea>
+            </div>
         </div>
     </div>
     <div class="col-md-2 offset-md-1">
