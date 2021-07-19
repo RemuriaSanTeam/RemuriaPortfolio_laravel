@@ -24,8 +24,7 @@
         <div class="mb-3 offset-md-1">
             <div class="col-6">
                 <label for="formFileMultiple" class="form-label">Image</label>
-                <input class="form-control" type="file" name="image" id="formFileMultiple" placeholder="アップロード💖"
-                    multiple>
+                <input class="form-control" type="file" name="image" id="formFileMultiple" placeholder="アップロード💖">
             </div>
         </div>
     </div>

@@ -13,12 +13,16 @@
             </div>
         </div>
     </div>
+    {{--<div>
+        <label>Image</label><br />
+        <input type="file" name="image" value="{{$item_list->image}}" placeholder="アップロード💖" />
+    </div>--}}
     <div class="form-group">
         <div class="mb-3 offset-md-1">
             <div class="col-6">
                 <label for="formFileMultiple" class="form-label">Image</label>
-                <input class="form-control" type="file" name="image" id="formFileMultiple"
-                    　value="{{$item_list->image}}" placeholder="アップロード💖" multiple>
+                <input type="file" class="form-control mb-3" name="image" value="{{$item_list->image}}"
+                    placeholder="アップロード💖" aria-label="Image" multiple>
             </div>
         </div>
     </div>
