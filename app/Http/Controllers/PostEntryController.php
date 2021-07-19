@@ -78,7 +78,7 @@ class PostEntryController extends Controller
         $item_list=PostEntry::findOrFail($request->id);
         $item_list->title=$request->title;
         if($request->hasFile('image')){
-            Storage::delete('public/image/'.$item_list->imege);
+            Storage::delete('public/image/'.$item_list->image);
             $filename=request()->file('image')->getClientOriginalName();
             $item_list->image=request('image')->storeAs('public/image',$filename);
         }
