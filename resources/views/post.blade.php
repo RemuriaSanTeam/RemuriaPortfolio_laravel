@@ -23,14 +23,14 @@
                             <div class="btn-group">
                                 <!--編集ボタン-->
                                 <a href="{{url('edit')}}?id={{$item->id}}"
-                                    class="btn btn-primary btn-sm btn-outline-secondary">編集</a>
+                                    class="btn btn-primary btn-sm">編集</a>
                                 <!--削除ボタン-->
                                 <form action='{{url('/remove')}}' method="POST">
                                     @csrf
                                     <input type='hidden' name='id' value='{{ $item->id }}'>
                                     <!--ここでpost_entryのid要素を取得してる-->
                                     <div class="text-center"><input type='submit'
-                                            class="btn-dell btn btn-danger btn-sm btn-outline-success" value="削除">
+                                            class="btn-dell btn btn-danger btn-sm" value="削除">
                                     </div>
                                 </form>
                             </div>

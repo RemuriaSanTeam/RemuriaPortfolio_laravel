@@ -1,7 +1,7 @@
 <footer class="text-muted">
     <div class="container">
         <p class="float-end">
-            <a href="#">TOP</a>
+            <a href="{{url('/')}}">TOP</a>
         </p>
         <p>&copy; RemuriaSanTeam 2021</p>
     </div>

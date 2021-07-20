@@ -1,4 +1,4 @@
-@include('parts.common')
+@include('parts.common',["title"=>"編集"])
 @include('parts.header')
 <h1 class="row justify-content-center">編集ページ💖</h1>
 <form class="my-3" method="POST" action="{{url('update')}}" enctype="multipart/form-data">

@@ -6,11 +6,13 @@
                     <h4 class="text-white">MEMU</h4>
                     <ul class="list-unstyled">
                         <li><a href="{{url('/main')}}" class="text-white">メイン</a></li>
+                        @if(Auth::check())
                         <li><a href="{{url('/post')}}" class="text-white">投稿</a></li>
                         <li><a href="{{url('/story')}}" class="text-white">ストーリー</a></li>
                         <li><a href="{{url('/profile')}}" class="text-white">プロフィール</a></li>
                         <li><a href="{{url('/setting')}}" class="text-white">設定</a></li>
                         <li><a href="{{url('/logout')}}" class="text-white">ログアウト</a></li>
+                        @endif
                     </ul>
                 </div>
             </div>
