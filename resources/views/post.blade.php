@@ -22,15 +22,14 @@
                             @if($item->user_id==Auth::user()->id)
                             <div class="btn-group">
                                 <!--編集ボタン-->
-                                <a href="{{url('edit')}}?id={{$item->id}}"
-                                    class="btn btn-primary btn-sm">編集</a>
+                                <a href="{{url('edit')}}?id={{$item->id}}" class="btn btn-primary btn-sm">編集</a>
                                 <!--削除ボタン-->
                                 <form action='{{url('/remove')}}' method="POST">
                                     @csrf
                                     <input type='hidden' name='id' value='{{ $item->id }}'>
                                     <!--ここでpost_entryのid要素を取得してる-->
-                                    <div class="text-center"><input type='submit'
-                                            class="btn-dell btn btn-danger btn-sm" value="削除">
+                                    <div class="text-center"><input type='submit' class="btn-dell btn btn-danger btn-sm"
+                                            value="削除">
                                     </div>
                                 </form>
                             </div>
@@ -50,7 +49,7 @@
     <script>
         $(function () {
             $(".btn-dell").click(function () {
-                if (confirm("マジで消すの⁉")) {} else {
+                if (confirm("マジで消すの!?")) {} else {
                     return false;
                 }
             });
