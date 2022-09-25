@@ -27,6 +27,7 @@
         "icss-utils": "^5.1.0",
         "node-notifier": "^10.0.0",
         "picomatch": "^2.3.0",
-        "purgecss": "^4.0.3"
+        "purgecss": "^4.0.3",
+        "yarn": "^1.22.19"
     }
 }
