@@ -34,9 +34,6 @@
                                 </form>
                             </div>
                             @endif
-                            <div class="btn-group">
-                                <button onclick="like({{$post->post_id}})">いいね</button>
-                            </div>
                         </div>
                     </div>
                 </div>
