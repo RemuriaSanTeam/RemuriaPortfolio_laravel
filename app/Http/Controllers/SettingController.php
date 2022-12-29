@@ -10,7 +10,7 @@ class SettingController extends Controller
     //
     public function show(){
         if(Auth::check()){
-            return view('profile\show');
+            return view('profile.show');
         }else{
             return view('top');
         }
